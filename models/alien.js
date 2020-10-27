@@ -18,7 +18,8 @@ const alienSchema = new mongoose.Schema({
     },
     
     houses: [{
-        type: String
+        type: String,
+        required: false
     }]
 })
 
