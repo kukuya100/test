@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start:hard":"node app.js",
-    "start:prod":"nodemon app.js"
+    "start:hard": "node app.js",
+    "start:prod": "nodemon app.js"
   },
   "author": "chang",
   "license": "ISC",
@@ -14,7 +14,5 @@
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.9"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+  "devDependencies": {}
 }

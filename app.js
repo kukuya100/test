@@ -14,7 +14,7 @@ con.on('open', () => {
 })
 
 app.use(express.json())
-
+  
 
 app.use(bodyParser.urlencoded({ extended: true }));
 const alienRouter = require('./routes/aliens')
