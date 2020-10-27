@@ -15,8 +15,11 @@ const alienSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
         default: false
-    }
-
+    },
+    
+    houses: [{
+        type: String
+    }]
 })
 
 module.exports = mongoose.model('Alien',alienSchema)
