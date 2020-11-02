@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Alien = require('../models/alien')
 
+
 router.get('/', async(req,res) => {
 
     try{
@@ -25,6 +26,18 @@ router.get('/:id', async(req,res) => {
    
 })
 
+router.post("/upload", function(req, res){
+    var title = req.body.title;
+    var fileObj = req.files.myFile;
+    var orgFileName = fileObj.originalname;
+    var saveFileName = fileObj.name;
+    var obj = {"title":title, "orgFileName":orgFileName, "saveFileName":saveFileName};
+    var newData = new DBData(obj);
+    newData.save(function(err){
+        if(err) res.send(err);
+        res.end("ok");
+    });
+});
 
 router.post('/', async(req,res) => {
 
